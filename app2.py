@@ -35,6 +35,10 @@ def interpret_backlinks(value):
 st.set_page_config(page_title="Décodeur SEMrush", layout="centered")
 st.title("🔍 Interpréteur simplifié de scores SEMrush")
 
+# 🔗 Bouton vers SEMrush tout en haut
+st.markdown("[🔗 Accéder à SEMrush Projects](https://www.semrush.com/projects/)", unsafe_allow_html=True)
+st.markdown("---")
+
 st.markdown("Entre les 3 principales métriques SEMrush pour obtenir une lecture stratégique directe.")
 
 # Inputs
@@ -49,8 +53,3 @@ if st.button("🧠 Interpréter"):
     st.markdown(f"**Autorité de domaine :** {interpret_domain_score(domain_score)}")
     st.markdown(f"**Trafic organique :** {interpret_traffic(traffic)}")
     st.markdown(f"**Backlinks :** {interpret_backlinks(backlinks)}")
-
-# Bouton vers SEMrush
-st.markdown("---")
-st.markdown("📊 Besoin de plus d'infos ? Consulte directement ton projet sur SEMrush 👇")
-st.markdown("[🔗 Accéder à SEMrush Projects](https://www.semrush.com/projects/)", unsafe_allow_html=True)
